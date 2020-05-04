@@ -1,0 +1,42 @@
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <style>
+    div#app { padding: 50px; margin: 30px auto; max-width: 300px; 
+      border: 1px solid #ccc; box-shadow: 3px 3px 3px #aaa;  }
+    span {  margin: 7px; padding: 1px 50px; 
+      border: 1px solid black; cursor: pointer; }
+    button { padding: 12px;  margin: 1px; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h1>
+     <span> {{ i }} </span>
+  
+  
+      <button type="button" v-on:click="increase">++</button>
+      <button type="button" v-on:click="minus">--</button>
+      
+    </h1>
+  </div>
+
+  <script type="text/javascript">
+    var app = new Vue({
+      el: '#app',
+      data: {
+        i : 0
+      },
+      methods: {
+        increase() {
+          this.i++;
+        },
+        minus() {
+          this.i--;
+        }
+      }
+    })
+   </script>
+</body>    
+</html>
