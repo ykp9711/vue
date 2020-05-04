@@ -5,19 +5,20 @@
   <style>
     div#app { padding: 30px; margin: 30px auto; max-width: 300px; 
       border: 1px solid #ccc; box-shadow: 3px 3px 3px #aaa;  }
-    span { display: inline-block; margin: 5px; padding: 8px 15px; 
+    span { display: inline-block; margin: 5px; padding: 5px 50px; 
       border: 1px solid black; cursor: pointer; }
-    div#app > div { margin-top: 20px; }
-    button { padding: 0.5em 2em; }
+    button { padding: 5px; }
   </style>
 </head>
 <body>
   <div id="app">
-    <span>
+    <span></span>
       {{ i }}
     </span>
     <div>
       <button type="button" v-on:click="increase">++</button>
+      <button type="button" v-on:click="minus">--</button>
+      
     </div>
   </div>
 
@@ -30,6 +31,9 @@
       methods: {
         increase() {
           this.i++;
+        },
+        minus() {
+          this.i--;
         }
       }
     })
