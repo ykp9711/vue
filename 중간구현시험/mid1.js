@@ -12,4 +12,4 @@ for(let i = 0; i < 100; i++){
 
 }
 
-console.log(sum/100);
+console.log((sum/100).toFixed(1));
