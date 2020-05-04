@@ -1,26 +1,24 @@
 let arr = [];
-let sum = 0;
+
+function callback(a, b) { 
+    console.log(a + ", " + b); 
+    return a + b; 
+  }  
+
 
 for(let i=0; i<100; i++) {
 
-
-
     arr[i] = Math.floor(Math.random()*100 + 1);
 
-
-
 }
 
-for(let i=1; i<=100; i++) {
+let a2 = arr.filter((e) => e % 2 === 0);
+
+console.log(a2);
+
+let sum = a2.reduce(callback);
 
 
+  
 
-    if(arr[i] % 2 == 0) {
 
-        sum=sum+arr[i];
-
-    }
-
-}
-
-console.log(sum);
